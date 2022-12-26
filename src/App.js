@@ -4,6 +4,8 @@ import Button from './components/Button';
 
 import { Container, Content, Row } from './styles';
 import { useState } from 'react';
+import { ContentMain } from './components/ContentMain';
+
 
 
 const App = () => {
@@ -100,7 +102,11 @@ const App = () => {
   }
 
   return (
+
     <Container>
+      <div>
+        <h1>Calculadora</h1>
+      </div>
       <Content>
         <Input value={currentNumber}/>
         <Row>
@@ -127,7 +133,11 @@ const App = () => {
           <Button label="3" onClick={() => handleAddNumber('3')}/>
           <Button label="=" onClick={handleEquals}/>
         </Row>
+        <Row>
+        <Button label="0" onClick={() => handleAddNumber('0')}/>
+        </Row>
       </Content>
+      <ContentMain />
     </Container>
   );
 }
